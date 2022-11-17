@@ -11,6 +11,10 @@ namespace Shiva_Password_Cracker_and_Hashing_Tool
         private string _clearText;
         private string _cipherText;
 
+        protected Hash(string clearText)
+        {
+            _clearText = clearText;
+        }
         protected Hash(string clearText, string cipherText)
         {
             _clearText = clearText;
