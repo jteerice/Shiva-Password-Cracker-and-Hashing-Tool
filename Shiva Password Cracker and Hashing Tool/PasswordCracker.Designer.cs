@@ -1,6 +1,6 @@
 ﻿namespace Shiva_Password_Cracker_and_Hashing_Tool
 {
-    partial class Shiva_Menu
+    partial class Password_Cracker
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // Shiva_Menu
+            // Password_Cracker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "Shiva_Menu";
-            this.Text = "Shiva";
+            this.Name = "Password_Cracker";
+            this.Text = "Shiva Password Cracker";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Password_Cracker_FormClosing);
             this.ResumeLayout(false);
 
         }

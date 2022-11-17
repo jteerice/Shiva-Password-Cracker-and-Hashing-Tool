@@ -16,5 +16,19 @@ namespace Shiva_Password_Cracker_and_Hashing_Tool
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Password_Cracker pc = new Password_Cracker();
+            pc.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Hashing_Tool ht = new Hashing_Tool();
+            ht.ShowDialog();
+        }
     }
 }

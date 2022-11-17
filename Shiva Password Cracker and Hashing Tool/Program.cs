@@ -16,7 +16,7 @@ namespace Shiva_Password_Cracker_and_Hashing_Tool
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Shiva_Menu());
         }
     }
 }

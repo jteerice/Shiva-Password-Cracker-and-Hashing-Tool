@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Shiva_Password_Cracker_and_Hashing_Tool
 {
-    public partial class Password_Cracker : Form
+    public partial class Hashing_Tool : Form
     {
-        public Password_Cracker()
+        public Hashing_Tool()
         {
             InitializeComponent();
+        }
+
+        private void Hashing_Tool_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
