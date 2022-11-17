@@ -36,6 +36,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(650, 432);
             this.Name = "Hashing_Tool";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Shiva Hashing Tool";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Hashing_Tool_FormClosing);
             this.ResumeLayout(false);

@@ -36,6 +36,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "Password_Cracker";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Shiva Password Cracker";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Password_Cracker_FormClosing);
             this.ResumeLayout(false);
