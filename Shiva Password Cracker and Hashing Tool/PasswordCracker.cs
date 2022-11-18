@@ -14,6 +14,8 @@ namespace Shiva_Password_Cracker_and_Hashing_Tool
 {
     public partial class Password_Cracker : Form
     {
+        private int _format = -1;
+        public int Format { get { return _format; } set { _format = value; } }
         public Password_Cracker()
         {
             InitializeComponent();
@@ -39,6 +41,42 @@ namespace Shiva_Password_Cracker_and_Hashing_Tool
                     MessageBox.Show("Error: Please select a valid file");
                 }
             }
+        }
+
+        private void btnCrack_Click(object sender, EventArgs e)
+        {
+            if (CipherText.Text == "")
+            {
+                throw new Exception("Please enter a hash to crack.");
+            }
+            else
+            {
+                string path = pathText.Text;
+                string[] words = File.ReadAllLines($@"{path}");
+                WordLists lists = new WordLists(words, Format, CipherText.Text);
+                lists.createHashList();
+                
+            }
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            Format = 1;
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            Format = 2;
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            Format = 3;
+        }
+
+        private void radioButton4_CheckedChanged(object sender, EventArgs e)
+        {
+            Format = 4;
         }
     }
 }
