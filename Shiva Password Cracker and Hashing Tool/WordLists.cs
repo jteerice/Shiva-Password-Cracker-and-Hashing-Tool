@@ -20,6 +20,8 @@ namespace Shiva_Password_Cracker_and_Hashing_Tool
 
         public WordLists(string[] words, int format, string cipherText)
         {
+            _wordlist = new List<string>();
+            _hashList = new List<IHash>();  
             _wordlist.AddRange(words);  
             _format = format;
             _cipherText = cipherText;   

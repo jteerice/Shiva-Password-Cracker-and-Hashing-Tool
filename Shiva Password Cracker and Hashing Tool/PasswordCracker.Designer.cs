@@ -38,7 +38,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.pathText = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.ClearText = new System.Windows.Forms.TextBox();
             this.btnCrack = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -148,12 +148,12 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // ClearText
             // 
-            this.textBox1.Location = new System.Drawing.Point(15, 161);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(152, 20);
-            this.textBox1.TabIndex = 10;
+            this.ClearText.Location = new System.Drawing.Point(15, 161);
+            this.ClearText.Name = "ClearText";
+            this.ClearText.Size = new System.Drawing.Size(152, 20);
+            this.ClearText.TabIndex = 10;
             // 
             // btnCrack
             // 
@@ -171,7 +171,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(353, 228);
             this.Controls.Add(this.btnCrack);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.ClearText);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pathText);
             this.Controls.Add(this.label3);
@@ -203,7 +203,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox pathText;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox ClearText;
         private System.Windows.Forms.Button btnCrack;
     }
 }
