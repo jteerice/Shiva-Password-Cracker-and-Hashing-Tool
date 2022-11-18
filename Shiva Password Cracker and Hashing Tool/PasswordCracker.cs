@@ -55,8 +55,7 @@ namespace Shiva_Password_Cracker_and_Hashing_Tool
                 string[] words = File.ReadAllLines($@"{path}");
                 WordLists lists = new WordLists(words, Format, CipherText.Text);
                 lists.createHashList();
-                ClearText.Text = lists.crackCipherText();
-                
+                ClearText.Text = lists.crackCipherText();  
             }
         }
 

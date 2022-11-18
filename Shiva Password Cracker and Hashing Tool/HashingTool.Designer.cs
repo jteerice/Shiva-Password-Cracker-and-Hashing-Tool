@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Hashing_Tool));
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
@@ -37,14 +38,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.CipherText = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnHash = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(15, 25);
+            this.radioButton1.Location = new System.Drawing.Point(15, 31);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(51, 19);
             this.radioButton1.TabIndex = 0;
@@ -57,7 +58,7 @@
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(15, 75);
+            this.radioButton2.Location = new System.Drawing.Point(15, 82);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(71, 19);
             this.radioButton2.TabIndex = 1;
@@ -70,7 +71,7 @@
             // 
             this.radioButton3.AutoSize = true;
             this.radioButton3.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton3.Location = new System.Drawing.Point(15, 50);
+            this.radioButton3.Location = new System.Drawing.Point(15, 57);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(71, 19);
             this.radioButton3.TabIndex = 2;
@@ -83,7 +84,7 @@
             // 
             this.radioButton4.AutoSize = true;
             this.radioButton4.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton4.Location = new System.Drawing.Point(15, 100);
+            this.radioButton4.Location = new System.Drawing.Point(15, 107);
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(71, 19);
             this.radioButton4.TabIndex = 3;
@@ -96,7 +97,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 4);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(95, 18);
             this.label1.TabIndex = 4;
@@ -123,7 +124,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(225, 76);
+            this.label3.Location = new System.Drawing.Point(226, 53);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 18);
             this.label3.TabIndex = 7;
@@ -131,28 +132,29 @@
             // 
             // CipherText
             // 
-            this.CipherText.Location = new System.Drawing.Point(131, 101);
+            this.CipherText.Location = new System.Drawing.Point(131, 75);
             this.CipherText.Name = "CipherText";
+            this.CipherText.ReadOnly = true;
             this.CipherText.Size = new System.Drawing.Size(225, 20);
             this.CipherText.TabIndex = 8;
             // 
-            // button1
+            // btnHash
             // 
-            this.button1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(12, 127);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(89, 31);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Hash!";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnHash.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHash.Location = new System.Drawing.Point(131, 101);
+            this.btnHash.Name = "btnHash";
+            this.btnHash.Size = new System.Drawing.Size(225, 31);
+            this.btnHash.TabIndex = 9;
+            this.btnHash.Text = "Hash!";
+            this.btnHash.UseVisualStyleBackColor = true;
+            this.btnHash.Click += new System.EventHandler(this.button1_Click);
             // 
             // Hashing_Tool
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(381, 170);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(381, 139);
+            this.Controls.Add(this.btnHash);
             this.Controls.Add(this.CipherText);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -162,6 +164,7 @@
             this.Controls.Add(this.radioButton3);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Hashing_Tool";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Shiva Hashing Tool";
@@ -182,6 +185,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox CipherText;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnHash;
     }
 }
