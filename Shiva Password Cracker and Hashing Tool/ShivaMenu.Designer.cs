@@ -34,8 +34,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnMetaDataExtractor = new System.Windows.Forms.Button();
-            this.btnWordListGenerator = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // MenuLabel
@@ -84,40 +82,17 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri Light", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(78, 211);
+            this.label2.Location = new System.Drawing.Point(78, 163);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(135, 15);
             this.label2.TabIndex = 4;
             this.label2.Text = "For legal purposes ONLY.";
             // 
-            // btnMetaDataExtractor
-            // 
-            this.btnMetaDataExtractor.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMetaDataExtractor.Location = new System.Drawing.Point(146, 143);
-            this.btnMetaDataExtractor.Name = "btnMetaDataExtractor";
-            this.btnMetaDataExtractor.Size = new System.Drawing.Size(127, 49);
-            this.btnMetaDataExtractor.TabIndex = 5;
-            this.btnMetaDataExtractor.Text = "Metadata Extractor";
-            this.btnMetaDataExtractor.UseVisualStyleBackColor = true;
-            this.btnMetaDataExtractor.Click += new System.EventHandler(this.btnMetaDataExtractor_Click);
-            // 
-            // btnWordListGenerator
-            // 
-            this.btnWordListGenerator.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnWordListGenerator.Location = new System.Drawing.Point(12, 143);
-            this.btnWordListGenerator.Name = "btnWordListGenerator";
-            this.btnWordListGenerator.Size = new System.Drawing.Size(127, 49);
-            this.btnWordListGenerator.TabIndex = 6;
-            this.btnWordListGenerator.Text = "Word List Generator";
-            this.btnWordListGenerator.UseVisualStyleBackColor = true;
-            // 
             // Shiva_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(285, 234);
-            this.Controls.Add(this.btnWordListGenerator);
-            this.Controls.Add(this.btnMetaDataExtractor);
+            this.ClientSize = new System.Drawing.Size(285, 189);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
@@ -139,7 +114,5 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnMetaDataExtractor;
-        private System.Windows.Forms.Button btnWordListGenerator;
     }
 }

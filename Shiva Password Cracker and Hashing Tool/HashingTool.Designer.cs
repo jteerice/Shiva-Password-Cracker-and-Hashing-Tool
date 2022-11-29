@@ -39,6 +39,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.CipherText = new System.Windows.Forms.TextBox();
             this.btnHash = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.saltLengthText = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.saltLengthText)).BeginInit();
             this.SuspendLayout();
             // 
             // radioButton1
@@ -124,7 +127,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(226, 53);
+            this.label3.Location = new System.Drawing.Point(226, 72);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 18);
             this.label3.TabIndex = 7;
@@ -132,7 +135,7 @@
             // 
             // CipherText
             // 
-            this.CipherText.Location = new System.Drawing.Point(131, 75);
+            this.CipherText.Location = new System.Drawing.Point(131, 93);
             this.CipherText.Name = "CipherText";
             this.CipherText.ReadOnly = true;
             this.CipherText.Size = new System.Drawing.Size(225, 20);
@@ -141,19 +144,38 @@
             // btnHash
             // 
             this.btnHash.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHash.Location = new System.Drawing.Point(131, 101);
+            this.btnHash.Location = new System.Drawing.Point(373, 57);
             this.btnHash.Name = "btnHash";
-            this.btnHash.Size = new System.Drawing.Size(225, 31);
+            this.btnHash.Size = new System.Drawing.Size(120, 56);
             this.btnHash.TabIndex = 9;
             this.btnHash.Text = "Hash!";
             this.btnHash.UseVisualStyleBackColor = true;
             this.btnHash.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(406, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(63, 18);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Add Salt:";
+            // 
+            // saltLengthText
+            // 
+            this.saltLengthText.Location = new System.Drawing.Point(373, 30);
+            this.saltLengthText.Name = "saltLengthText";
+            this.saltLengthText.Size = new System.Drawing.Size(120, 20);
+            this.saltLengthText.TabIndex = 11;
+            // 
             // Hashing_Tool
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(381, 139);
+            this.ClientSize = new System.Drawing.Size(505, 134);
+            this.Controls.Add(this.saltLengthText);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.btnHash);
             this.Controls.Add(this.CipherText);
             this.Controls.Add(this.label3);
@@ -169,6 +191,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Shiva Hashing Tool";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Hashing_Tool_FormClosing);
+            ((System.ComponentModel.ISupportInitialize)(this.saltLengthText)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,5 +209,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox CipherText;
         private System.Windows.Forms.Button btnHash;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.NumericUpDown saltLengthText;
     }
 }

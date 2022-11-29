@@ -29,6 +29,7 @@ namespace Shiva_Password_Cracker_and_Hashing_Tool
         {
             string clearText = ClearText.Text;
             string cipherText;
+            int salt = int.Parse(saltLengthText.Text);
 
             switch (Format)
             {

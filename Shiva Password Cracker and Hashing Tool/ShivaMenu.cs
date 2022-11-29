@@ -30,12 +30,5 @@ namespace Shiva_Password_Cracker_and_Hashing_Tool
             Hashing_Tool ht = new Hashing_Tool();
             ht.ShowDialog();
         }
-
-        private void btnMetaDataExtractor_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Metadata_Extractor mde = new Metadata_Extractor();
-            mde.ShowDialog();
-        }
     }
 }
