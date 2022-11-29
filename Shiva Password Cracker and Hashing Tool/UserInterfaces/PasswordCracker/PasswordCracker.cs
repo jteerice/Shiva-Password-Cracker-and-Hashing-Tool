@@ -9,18 +9,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace Shiva_Password_Cracker_and_Hashing_Tool
 {
     public partial class Password_Cracker : Form
     {
+        #region Fields
         private int _format = -1;
+        #endregion
+        #region Properties
         public int Format { get { return _format; } set { _format = value; } }
+        #endregion
+        #region Constructor
         public Password_Cracker()
         {
             InitializeComponent();
         }
-
+        #endregion
+        #region Events
         private void Password_Cracker_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
@@ -78,5 +85,23 @@ namespace Shiva_Password_Cracker_and_Hashing_Tool
         {
             Format = 4;
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt");
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://github.com/danielmiessler/SecLists/tree/master/Passwords");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            CipherText.Text = "";
+            pathText.Text = "";
+            ClearText.Text = "";
+        }
+        #endregion
     }
 }

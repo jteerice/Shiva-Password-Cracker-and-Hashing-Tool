@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Shiva_Password_Cracker_and_Hashing_Tool.HashClasses;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -29,7 +30,14 @@ namespace Shiva_Password_Cracker_and_Hashing_Tool
         {
             string clearText = ClearText.Text;
             string cipherText;
-            int salt = int.Parse(saltLengthText.Text);
+            int saltSize = int.Parse(saltLengthText.Text);
+
+            if (saltSize != 0)
+            {
+                Salt salt = new Salt(saltSize);
+                salt.GenerateSalt();
+                clearText += salt.AsciiSalt;
+            }
 
             switch (Format)
             {
