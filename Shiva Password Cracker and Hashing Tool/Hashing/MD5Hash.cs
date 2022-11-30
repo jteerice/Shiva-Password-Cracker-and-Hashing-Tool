@@ -20,7 +20,7 @@ namespace Hashing
         public MD5Hash(string clearText) : base(clearText)
         {
         }
-        public MD5Hash(string clearText, string CipherText) : base(clearText, CipherText)
+        public MD5Hash(string clearText, string cipherText) : base(clearText, cipherText)
         {
         }
         #endregion

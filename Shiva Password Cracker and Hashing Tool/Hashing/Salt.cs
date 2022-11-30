@@ -7,12 +7,12 @@ namespace Hashing
     internal class Salt
     {
         #region Fields
-        private static readonly char[] characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890".ToCharArray();
+        private static readonly char[] _characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890".ToCharArray();
         private int _size;
         private string _asciiSalt;
         #endregion
         #region Properties
-        public char[] Characters { get { return characters; } }
+        public char[] Characters { get { return _characters; } }
         public int Size { get { return _size; } }
         public string AsciiSalt { get { return _asciiSalt; } set { _asciiSalt = value; } }
         #endregion
