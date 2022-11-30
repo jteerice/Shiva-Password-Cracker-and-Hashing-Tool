@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Hashing;
 
-namespace Shiva_Password_Cracker_and_Hashing_Tool
+namespace WordList
 {
     internal class WordLists
     {

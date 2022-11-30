@@ -5,7 +5,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Shiva_Password_Cracker_and_Hashing_Tool
+namespace Hashing
 {
     internal class SHA128Hash : Hash, IHash
     {

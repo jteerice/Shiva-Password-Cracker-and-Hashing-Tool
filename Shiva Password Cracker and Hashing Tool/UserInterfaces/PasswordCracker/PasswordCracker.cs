@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
+using WordList;
 
 namespace Shiva_Password_Cracker_and_Hashing_Tool
 {

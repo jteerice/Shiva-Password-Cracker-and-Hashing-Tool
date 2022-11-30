@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Text;
 
-namespace Shiva_Password_Cracker_and_Hashing_Tool.HashClasses
+namespace Hashing
 {
     internal class Salt
     {
