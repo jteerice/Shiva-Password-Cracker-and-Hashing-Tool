@@ -10,16 +10,21 @@ namespace Shiva_Password_Cracker_and_Hashing_Tool
 {
     internal class MD5Hash : Hash, IHash
     {
+        #region Fields
         private byte[] _inputBytes;
+        #endregion
+        #region Properties
         public byte[] InputBytes { get { return _inputBytes; } set { _inputBytes = value; } }
-
+        #endregion
+        #region Constructors
         public MD5Hash(string clearText) : base(clearText)
         {
         }
         public MD5Hash(string clearText, string CipherText) : base(clearText, CipherText)
         {
         }
-
+        #endregion
+        #region Methods
         public override string hash()
         {
             using (MD5 md5 = MD5.Create())
@@ -41,5 +46,6 @@ namespace Shiva_Password_Cracker_and_Hashing_Tool
 
             return sb.ToString();
         }
+        #endregion
     }
 }

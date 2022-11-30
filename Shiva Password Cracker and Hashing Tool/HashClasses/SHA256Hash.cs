@@ -9,16 +9,21 @@ namespace Shiva_Password_Cracker_and_Hashing_Tool
 {
     internal class SHA256Hash : Hash, IHash
     {
+        #region Fields
         private byte[] _inputBytes;
+        #endregion
+        #region Properties
         public byte[] InputBytes { get { return _inputBytes; } set { _inputBytes = value; } }
-
+        #endregion
+        #region Constructors
         public SHA256Hash(string clearText) : base(clearText)
         {
         }
         public SHA256Hash(string clearText, string CipherText) : base(clearText, CipherText)
         {
         }
-
+        #endregion
+        #region Methods
         public override string hash()
         {
             using (SHA256 sha256 = SHA256.Create())
@@ -40,5 +45,6 @@ namespace Shiva_Password_Cracker_and_Hashing_Tool
 
             return sb.ToString();
         }
+        #endregion
     }
 }

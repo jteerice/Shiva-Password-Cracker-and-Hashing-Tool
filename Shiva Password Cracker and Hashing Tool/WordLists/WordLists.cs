@@ -8,16 +8,19 @@ namespace Shiva_Password_Cracker_and_Hashing_Tool
 {
     internal class WordLists
     {
+        #region Fields
         private List<string> _wordlist;
         private List<IHash> _hashList;
         private string _cipherText;
         private int _format = -1;
-
+        #endregion
+        #region Properties
         public List<string> Wordlist { get { return _wordlist; } }
         public List<IHash> Hashlist { get { return _hashList; } }
         public string CipherText { get { return _cipherText; } }
         public int Format { get { return _format; } }
-
+        #endregion
+        #region Constructors
         public WordLists(string[] words, int format, string cipherText)
         {
             _wordlist = new List<string>();
@@ -26,7 +29,8 @@ namespace Shiva_Password_Cracker_and_Hashing_Tool
             _format = format;
             _cipherText = cipherText;   
         }
-
+        #endregion
+        #region Methods
         public void createHashList()
         {
             switch (Format)
@@ -69,6 +73,6 @@ namespace Shiva_Password_Cracker_and_Hashing_Tool
             }
             return "Not found!";
         }
-
+        #endregion
     }
 }
