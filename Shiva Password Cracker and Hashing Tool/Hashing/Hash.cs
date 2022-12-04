@@ -12,6 +12,7 @@ namespace Hashing
         private string _clearText;
         private string _cipherText;
         #endregion
+
         #region Constructors
         protected Hash(string clearText)
         {
@@ -23,10 +24,12 @@ namespace Hashing
             _cipherText = cipherText;
         }
         #endregion
+
         #region Properties
         public string ClearText { get { return _clearText; } set { _clearText = value; } }
         public string CipherText { get { return _cipherText; } set { _cipherText = value; } }
         #endregion
+
         #region Methods
         public abstract string hash();
         #endregion

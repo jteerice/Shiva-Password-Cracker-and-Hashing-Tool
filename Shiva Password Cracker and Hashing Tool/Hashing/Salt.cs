@@ -11,11 +11,13 @@ namespace Hashing
         private int _size;
         private string _asciiSalt;
         #endregion
+
         #region Properties
         public char[] Characters { get { return _characters; } }
         public int Size { get { return _size; } }
         public string AsciiSalt { get { return _asciiSalt; } set { _asciiSalt = value; } }
         #endregion
+
         #region Constructors
         public Salt(int size)
         {
@@ -23,6 +25,7 @@ namespace Hashing
             _asciiSalt = "";
         }
         #endregion
+
         #region Methods
         public void GenerateSalt()
         {

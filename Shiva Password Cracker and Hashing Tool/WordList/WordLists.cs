@@ -15,12 +15,14 @@ namespace WordList
         private string _cipherText;
         private int _format = -1;
         #endregion
+
         #region Properties
         public List<string> Wordlist { get { return _wordlist; } }
         public List<IHash> Hashlist { get { return _hashList; } }
         public string CipherText { get { return _cipherText; } }
         public int Format { get { return _format; } }
         #endregion
+
         #region Constructors
         public WordLists(string[] words, int format, string cipherText)
         {
@@ -31,6 +33,7 @@ namespace WordList
             _cipherText = cipherText;   
         }
         #endregion
+
         #region Methods
         public void createHashList()
         {

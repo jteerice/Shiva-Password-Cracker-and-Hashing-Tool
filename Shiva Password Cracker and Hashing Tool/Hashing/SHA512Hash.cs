@@ -12,9 +12,11 @@ namespace Hashing
         #region Fields
         private byte[] _inputBytes;
         #endregion
+
         #region Properties
         public byte[] InputBytes { get { return _inputBytes; } set { _inputBytes = value; } }
         #endregion
+
         #region Constructors
         public SHA512Hash(string clearText) : base(clearText)
         {
@@ -23,6 +25,7 @@ namespace Hashing
         {
         }
         #endregion
+
         #region Methods
         public override string hash()
         {
