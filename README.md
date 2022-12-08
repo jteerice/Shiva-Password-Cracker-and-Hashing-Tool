@@ -44,4 +44,12 @@ The password cracker UI also includes links to well known word lists such as roc
 - [x] Hash generation for empty string // Expected message box "Please enter a string." // Result message box "Please enter a string."
 - [x] Hash generation with size 2 salt with string "phrase123456" // Expected anything but "f2090eba48418e2c83afbd8d21162f0f586dde628ad66b4d5ea1813a7a37bae135a283e6541f7f29a53001f2600436041e18923d7d165cd693152c2d0e1d43a4" // Result "5548e6cbe4cf83683789d3656fae3a59ae40e4225838ff788b8dcc7696cf787f7d26ee1fb9f7a964b6e42a72720c3bcb06a79c3db791f9a53834009c994ffdea"
 
+### WordList
+- [x] Crack password for MD5 hash "cfeaea3d30fc87fede068121042c9017" // Expected "vspeed" // Result "vspeed"
+- [x] Crack password for SHA-156 hash "051059b7441c884cb296f4635e6d155921f8c0fa" // Expected "vspeed" // Result "vspeed"
+- [x] Crack password for SHA-256 hash "354cab18f3a67143e3de1963e51fe6bf03d52a7b28924cf37bf0cd7b2b62460a" // Expected "vspeed" // Result "vspeed"
+- [x] Crack password for SHA-512 hash "6188c9983ffeaed160b7034d871f5fa52958436bf1141264edc70c8362a6170b42f0a9c9ef9161988de2b1cab2047889964d7835df89c54a4a7d8d7c0d4b587d" // Expected "vspeed" // Result "vspeed"
+- [x] Crack password with no hash input // Expected message box "Please enter hash to crack." // Result message box "Please enter hash to crack."
+- [x] Crack password with no word list selected // Expected message box "Please select a word list." // Result message box "Please select a word list."
+
 
