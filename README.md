@@ -15,6 +15,7 @@ The password cracker takes user input in the form of a hash value. This hash val
 # Test Cases
 
 ### MD5Hash
-- [x] Stand string generation - "phrase123456"
+- [x] Hash generation for simple string "phrase123456" // Expected "6596088e10363a7093d725e76fe705f8" // Result "6596088e10363a7093d725e76fe705f8"
+- [ ] 
 
 
