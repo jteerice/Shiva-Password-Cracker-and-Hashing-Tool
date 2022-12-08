@@ -12,4 +12,9 @@ The password cracker takes user input in the form of a hash value. This hash val
 # UML Diagram
 ![Screenshot](Shiva%20UML%20Diagram-1.png)
 
+# Test Cases
+
+### MD5Hash
+- [x]
+
 
