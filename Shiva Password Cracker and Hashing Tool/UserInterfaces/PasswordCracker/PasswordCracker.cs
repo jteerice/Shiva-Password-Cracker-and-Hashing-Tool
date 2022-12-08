@@ -55,7 +55,11 @@ namespace Shiva_Password_Cracker_and_Hashing_Tool
         {
             if (CipherText.Text == "")
             {
-                throw new Exception("Please enter a hash to crack.");
+                MessageBox.Show("Please enter a hash to crack.");
+            }
+            else if (pathText.Text == "")
+            {
+                MessageBox.Show("Please select a word list.");
             }
             else
             {

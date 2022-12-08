@@ -28,41 +28,48 @@ namespace Shiva_Password_Cracker_and_Hashing_Tool
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string clearText = ClearText.Text;
-            string cipherText;
-            int saltSize = int.Parse(saltLengthText.Text);
-
-            if (saltSize != 0)
+            if (ClearText.Text == "")
             {
-                Salt salt = new Salt(saltSize);
-                salt.GenerateSalt();
-                clearText += salt.AsciiSalt;
+                MessageBox.Show("Please enter a string.");
             }
-
-            switch (Format)
+            else
             {
-                case 1:
-                    MD5Hash md5hash = new MD5Hash(clearText);
-                    cipherText = md5hash.hash();
-                    CipherText.Text = cipherText;
-                    break;
-                case 2:
-                    SHA128Hash sha128hash = new SHA128Hash(clearText);
-                    cipherText = sha128hash.hash();
-                    CipherText.Text = cipherText;
-                    break;
-                case 3:
-                    SHA256Hash sha256hash = new SHA256Hash(clearText);
-                    cipherText = sha256hash.hash();
-                    CipherText.Text = cipherText;
-                    break;
-                case 4:
-                    SHA512Hash sha512hash = new SHA512Hash(clearText);
-                    cipherText = sha512hash.hash();
-                    CipherText.Text = cipherText;
-                    break;
+                string clearText = ClearText.Text;
+                string cipherText;
+                int saltSize = int.Parse(saltLengthText.Text);
+
+                if (saltSize != 0)
+                {
+                    Salt salt = new Salt(saltSize);
+                    salt.GenerateSalt();
+                    clearText += salt.AsciiSalt;
+                }
+
+                switch (Format)
+                {
+                    case 1:
+                        MD5Hash md5hash = new MD5Hash(clearText);
+                        cipherText = md5hash.hash();
+                        CipherText.Text = cipherText;
+                        break;
+                    case 2:
+                        SHA128Hash sha128hash = new SHA128Hash(clearText);
+                        cipherText = sha128hash.hash();
+                        CipherText.Text = cipherText;
+                        break;
+                    case 3:
+                        SHA256Hash sha256hash = new SHA256Hash(clearText);
+                        cipherText = sha256hash.hash();
+                        CipherText.Text = cipherText;
+                        break;
+                    case 4:
+                        SHA512Hash sha512hash = new SHA512Hash(clearText);
+                        cipherText = sha512hash.hash();
+                        CipherText.Text = cipherText;
+                        break;
+                }
+                ClearText.Text = "";
             }
-            ClearText.Text = "";
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
